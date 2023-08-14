@@ -18,8 +18,11 @@
 |
 */
 
-import Route from '@ioc:Adonis/Core/Route'
+import Route from "@ioc:Adonis/Core/Route";
+import Env from "@ioc:Adonis/Core/Env";
 
-Route.get('/', async ({ view }) => {
-  return view.render('welcome')
-})
+Route.get("/", async ({ view }) => {
+    return view.render("index", {
+        title: Env.get("APP_NAME"),
+    });
+});
