@@ -11,29 +11,14 @@
 
 <body>
 
-    <main class="page-wrapper with-navbar">
+    <main class="page-wrapper with-navbar dark-mode">
         <nav class="navbar">
             <h1>WillWebGame</h1>
-            <!-- Navbar content (with toggle sidebar button) -->
-            {{-- <div class="navbar-content">
-                <button class="btn btn-action" type="button">
-                    <i class="fa fa-bars" aria-hidden="true"></i>
-                    <span class="sr-only">Toggle sidebar</span> <!-- sr-only = show only on screen readers -->
-                </button>
-            </div> --}}
-            <!-- Navbar brand -->
-            <a href="https://github.com/ameryu716" class="navbar-brand">
-                <img src="{{ asset('assets/images/github-mark.svg') }}" alt="github-logo" />
-
-            </a>
-            <!-- Navbar text -->
-            {{-- <span class="navbar-text text-monospace">v3.0</span> --}}
-            <!-- Navbar nav -->
             <ul class="navbar-nav d-none d-md-flex ml-auto">
-                <!-- d-none = display: none, d-md-flex = display: flex on medium screens and up (width > 768px) -->
                 <li class="nav-item active">
                     <a href="https://github.com/ameryu716" class="navbar-brand">
-                        <img src="/img/github-mark.svg" alt="github-logo">
+                        <img src="{{ asset('assets/images/github-mark.svg') }}" alt="github-logo" />
+
                     </a>
                 </li>
                 {{-- <li class="nav-item">
