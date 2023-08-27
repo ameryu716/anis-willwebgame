@@ -69,44 +69,18 @@
     <main>
         <div class="container-sm">
             <div class="row row-cols-1 row-cols-sm-2 g-3">
+                @each(data in data.tool_links)
                 <div class="col">
-                    <div class="card specific-w-300 mw-100 h-300 mx-auto">
-                        <img src="..." class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <h6 class="card-subtitle mb-2 text-body-secondary">Subtitle</h6>
-                            <p class="card-text">
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
-                            </p>
-                            <a href="#" class="btn btn-primary">Card link</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card specific-w-300 mw-100 h-300 mx-auto">
-                        <img src="..." class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <h6 class="card-subtitle mb-2 text-body-secondary">Subtitle</h6>
-                            <p class="card-text">
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
-                            </p>
-                            <a href="#" class="btn btn-primary">Card link</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    @!component('introduction-cards', {
-                    thumbnail_url: '',
+                    @!component('components/introduction-cards', {
+                    thumbnail_url: asset('assets/images/link_thumbnails/empty.jpg'),
                     thumbnail_alt: '',
-                    title: '漢検2級読みクイズ',
-                    subtitle: 'ゲーム感覚で答える読み漢検クイズ',
+                    title: data.title,
+                    subtitle: data.subtitle,
                     description: '',
                     relative_url: '',
                     })
                 </div>
+                @end
             </div>
         </div>
 

@@ -23,17 +23,17 @@ import Route from "@ioc:Adonis/Core/Route";
 const data = {
   tool_links: [
     {
-      name: "将棋の駒ジェネレータ",
+      title: "将棋の駒ジェネレータ",
       relative_url: "shogi-piece-generator",
       thumbnail_url: "thumbnails/shogi-piece-generator.jpeg",
     },
     {
-      name: "〇〇好き異常行動者否定ジェネレータ",
+      title: "〇〇好き異常行動者否定ジェネレータ",
       relative_url: "gene-1",
       thumbnail_url: "thumbnails/gene-1.jpeg",
     },
     {
-      name: "BoxDancer",
+      title: "BoxDancer",
       relative_url: "box-dancer",
       thumbnail_url: "thumbnails/box-dancer.jpeg",
     },
@@ -58,7 +58,7 @@ const data = {
 };
 
 Route.get("/", async ({ view }) => {
-  return view.render("index", {
+  return await view.render("index", {
     data: data,
   });
 });
