@@ -1,0 +1,25 @@
+.fl {
+    display: flex;
+    align-items: center;
+    .a-i {
+        align-items: initial;
+    }
+    .a-st {
+        align-items: start;
+    }
+    .a-end {
+        align-items: end;
+    }
+    .j-st {
+        justify-content: start;
+    }
+    .j-c {
+        justify-content: center;
+    }
+    .j-b {
+        justify-content: space-between;
+    }
+    .j-end {
+        justify-content: end;
+    }
+}
