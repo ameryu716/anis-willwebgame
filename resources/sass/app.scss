@@ -4,7 +4,6 @@ html,
 body {
   background-color: #f7f8fa;
   font-family: "Poppins", sans-serif;
-  height: 100vh;
   color: #46444c;
   position: relative;
 }
@@ -29,14 +28,26 @@ a {
   text-decoration: none;
 }
 
+header {
+  nav {
+    .nav-item {
+      a {
+        img {
+          filter: invert(0.8);
+          width: 30px;
+        }
+      }
+    }
+  }
+}
+
 main {
   /* max-width: 620px; */
-  margin: auto;
-  height: 100vh;
+  margin: 1rem auto;
   padding: 0 30px;
   align-items: center;
   display: flex;
-  justify-content: center;
+  width: 1000px;
 }
 
 .title {
@@ -76,18 +87,3 @@ main code {
   background: #e6e2ff;
 }
 
-header {
-  nav {
-    .nav-item {
-      a {
-        img {
-          filter: invert(0.8);
-          width: 30px;
-        }
-      }
-    }
-  }
-}
-
-main {
-}

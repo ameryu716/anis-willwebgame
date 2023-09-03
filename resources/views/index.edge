@@ -68,15 +68,15 @@
 
     <main>
         <div class="container-sm">
-            <div class="row row-cols-1 row-cols-sm-2 g-3">
-                @each(data in data.tool_links)
+            <div class="row row-cols-1 row-cols-sm-3 g-3">
+                @each(data in data.links)
                 <div class="col">
                     @!component('components/introduction-cards', {
                     thumbnail_url: asset('assets/images/link_thumbnails/empty.jpg'),
                     thumbnail_alt: '',
                     title: data.title,
                     subtitle: data.subtitle,
-                    description: '',
+                    description: data.description,
                     relative_url: '',
                     })
                 </div>
