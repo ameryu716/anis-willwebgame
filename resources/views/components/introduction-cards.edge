@@ -1,9 +1,14 @@
-<div class="card specific-w-300 mw-100 h-300 mx-auto">
-    <img src="{{thumbnail_url}}" class="card-img-top" alt="{{thumbnail_alt}}">
+<div class="card mw-100 mx-auto fl hr">
+    <img src="{{thumbnail_url}}" class=" card-thumbnails" alt="{{thumbnail_alt}}">
     <div class="card-body">
         <h5 class="card-title">{{title}}</h5>
-        <h6 class="card-subtitle mb-2 text-body-secondary">{{subtitle}}</h6>
-        <p class="card-text">
+        {{-- <h6 class="mb-2 card-subtitle">{{subtitle}}</h6> --}}
+        <div class="mb-2">
+            @each(tag in tags)
+            <span class="badge text-bg-dark">{{tag}}</span>
+            @end
+        </div>
+        <p class="card-text o-i h-200">
             {{description}}
         </p>
         <a href="{{relative_url}}" class="btn btn-primary">開く</a>

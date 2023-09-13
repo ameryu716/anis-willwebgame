@@ -1,89 +1,102 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
 
-html,
-body {
-  background-color: #f7f8fa;
-  font-family: "Poppins", sans-serif;
-  color: #46444c;
-  position: relative;
+// html,
+// body {
+//   background-color: #f7f8fa;
+//   font-family: "Poppins", sans-serif;
+//   color: #46444c;
+//   position: relative;
+// }
+
+// body:before {
+//   content: "";
+//   background: #5a45ff;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   height: 6px;
+//   position: absolute;
+// }
+
+// * {
+//   margin: 0;
+//   padding: 0;
+// }
+
+// a {
+//   color: #5a45ff;
+//   text-decoration: none;
+// }
+
+// header {
+//   nav {
+//     .nav-item {
+//       a {
+//         img {
+//           filter: invert(0.8);
+//           width: 30px;
+//         }
+//       }
+//     }
+//   }
+// }
+
+// main {
+//   /* max-width: 620px; */
+//   margin: 1rem auto;
+//   padding: 0 30px;
+//   align-items: center;
+//   display: flex;
+//   width: 1100px;
+// }
+
+// .title {
+//   font-size: 50px;
+//   line-height: 50px;
+//   margin-bottom: 10px;
+//   color: #17161a;
+// }
+
+// .subtitle {
+//   font-size: 26px;
+//   margin-bottom: 40px;
+// }
+
+// p {
+//   margin-bottom: 20px;
+// }
+
+// main ul {
+//   list-style: none;
+// }
+
+// main li {
+//   margin-bottom: 5px;
+//   position: relative;
+//   padding-left: 25px;
+// }
+
+// main li:before {
+//   content: "—";
+//   position: absolute;
+//   left: 0;
+// }
+
+// main code {
+//   font-size: 16px;
+//   background: #e6e2ff;
+// }
+
+img.card-thumbnails {
+  padding: 0.8em;
+  width: 40%;
 }
 
-body:before {
-  content: "";
-  background: #5a45ff;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 6px;
-  position: absolute;
+:root {
+  --bs-card-spacer-x: 0.5em;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-}
+.card {
+  --bs-card-spacer-x: 0.5em;
 
-a {
-  color: #5a45ff;
-  text-decoration: none;
 }
-
-header {
-  nav {
-    .nav-item {
-      a {
-        img {
-          filter: invert(0.8);
-          width: 30px;
-        }
-      }
-    }
-  }
-}
-
-main {
-  /* max-width: 620px; */
-  margin: 1rem auto;
-  padding: 0 30px;
-  align-items: center;
-  display: flex;
-  width: 1000px;
-}
-
-.title {
-  font-size: 50px;
-  line-height: 50px;
-  margin-bottom: 10px;
-  color: #17161a;
-}
-
-.subtitle {
-  font-size: 26px;
-  margin-bottom: 40px;
-}
-
-p {
-  margin-bottom: 20px;
-}
-
-main ul {
-  list-style: none;
-}
-
-main li {
-  margin-bottom: 5px;
-  position: relative;
-  padding-left: 25px;
-}
-
-main li:before {
-  content: "—";
-  position: absolute;
-  left: 0;
-}
-
-main code {
-  font-size: 16px;
-  background: #e6e2ff;
-}
-

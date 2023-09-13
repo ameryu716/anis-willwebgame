@@ -1,6 +1,12 @@
 .fl {
     display: flex;
     align-items: center;
+    &.hr {
+        flex-direction: row;
+    }
+&.cl {
+    flex-direction: column;
+}
     .a-i {
         align-items: initial;
     }
@@ -22,4 +28,22 @@
     .j-end {
         justify-content: end;
     }
+}
+
+.o-i {
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+
+.h-200 {
+    height: 200px;
+}
+
+.h-250 {
+    height: 250px;
+}
+
+.h-300 {
+    height: 300px;
 }
