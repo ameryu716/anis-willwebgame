@@ -28,7 +28,7 @@ const data = {
       thumbnail_url: "assets/images/link_thumbnails/thumb-t1.png",
       description: "駒の名前は自分で決めろ、目指せ3D駒モデラー！！",
       division: "tool",
-      tags: ["Generator"],
+      tags: [{ class: "tool", name: "Generator", color: "#f17070" }],
     },
 
     {
@@ -38,7 +38,7 @@ const data = {
       description:
         "「ジェネレータが好きな人と付き合いたいです～！」というのは、ジェネレータで身内ノリしてワイワイできる人を探してるのであって、スクリプトをガンガン書いて笑みを浮かべたり、深夜二時にエラーが出て発狂したりするような異常行動者を探しているわけではない。",
       division: "tool",
-      tags: ["Generator"],
+      tags: [{ class: "tool", name: "Generator", color: "#f17070" }],
     },
     {
       title: "BoxDancer",
@@ -47,7 +47,7 @@ const data = {
       description:
         "自分だけのローカルブックマークツール！データはブラウザに保存されるので安心して使えます。",
       division: "tool",
-      tags: ["Tool"],
+      tags: [{ class: "tool", name: "Tool", color: "#f17070" }],
     },
     {
       title: "画像ピンボール",
@@ -56,7 +56,7 @@ const data = {
       division: "game",
       description:
         "手始めに画像を入れるところからスタートだ。¥n¥n画像が丸く表示されたらスタート！¥n¥n画像を回せ！動かせ！驚かせろ！加速しろ！加速すると止まらない！共有したら社交ダンスに誘え！Twitterなら使った画像も一緒に共有できるぞ！¥n¥n画面の向こうの仲間と困惑を共有しろ！",
-      tags: ["Game"],
+      tags: [{ class: "game", name: "Game", color: "#a86aff" }],
     },
     {
       title: "ジャイロ将棋",
@@ -65,7 +65,7 @@ const data = {
       division: "game",
       description:
         "うまく将棋盤を傾けて、歩兵で玉将に突撃しよう！王は逃げるのが得意でちょこまかと動き回る！うまく動きを読んで突撃しろ！！¥n¥n歩兵の位置が玉に重なればクリア！逆に将棋盤の外に出てしまうとNGだ。王のライフを先にゼロにしよう！",
-      tags: ["Game"],
+      tags: [{ class: "game", name: "Game", color: "#a86aff" }],
     },
 
     {
@@ -75,7 +75,7 @@ const data = {
       division: "game",
       description:
         "※音が出ます。ご注意ください。¥n¥n一般人の常識？漢検二級の読みが効果音付きで学習できる！¥n¥n総合正解率付きで結果が分かりやすい！全140問から出題。問題文はちょっと意味が分からない文が多い！気を付けるように。¥n¥n作者のおすすめは勝ち抜きモードだ！失敗は許されないぞ？",
-      tags: ["Game"],
+      tags: [{ class: "game", name: "Game", color: "#a86aff" }],
     },
   ],
 };

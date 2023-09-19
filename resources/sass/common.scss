@@ -33,9 +33,21 @@
 .o-i {
     overflow: hidden;
     text-overflow: ellipsis;
-
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        height: 50px;
+        width: 100%;
+        background: linear-gradient(to bottom,transparent 0% ,var(--bs-card-bg) 90%, var(--bs-card-bg) 100%);
+    }
 }
 
+.h-150 {
+    height: 150px;
+}
 .h-200 {
     height: 200px;
 }
@@ -46,4 +58,8 @@
 
 .h-300 {
     height: 300px;
+}
+
+.mh-300 {
+    min-height: 300px;
 }

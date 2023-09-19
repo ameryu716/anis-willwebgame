@@ -94,9 +94,27 @@ img.card-thumbnails {
 
 :root {
   --bs-card-spacer-x: 0.5em;
+  // --bs-primary: teal;
 }
 
 .card {
   --bs-card-spacer-x: 0.5em;
 
+}
+
+.badge {
+  &.game {
+    background-color: transparent;
+    $_color: #a86aff;
+    border: solid 1px $_color;
+    color: $_color;
+  }
+  &.tool {
+    background-color: transparent;
+
+    $_color: #f17070;
+
+    border: solid 1px $_color;
+    color: $_color;
+  }
 }
