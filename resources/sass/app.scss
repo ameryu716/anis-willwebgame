@@ -43,11 +43,12 @@ header {
 
 main {
   /* max-width: 620px; */
-  margin: 1rem auto;
-  padding: 0 30px;
+  margin: 0 auto;
+  padding: 1rem 30px;
   align-items: center;
   display: flex;
   width: 1000px;
+  min-height: 100vh;
 }
 
 .title {
@@ -86,4 +87,3 @@ main code {
   font-size: 16px;
   background: #e6e2ff;
 }
-
