@@ -4,9 +4,9 @@
     &.hr {
         flex-direction: row;
     }
-&.cl {
-    flex-direction: column;
-}
+    &.cl {
+        flex-direction: column;
+    }
     .a-i {
         align-items: initial;
     }
@@ -35,13 +35,13 @@
     text-overflow: ellipsis;
     position: relative;
     &::after {
-        content: '';
+        content: "";
         position: absolute;
         bottom: 0;
         right: 0;
         height: 50px;
         width: 100%;
-        background: linear-gradient(to bottom,transparent 0% ,var(--bs-card-bg) 90%, var(--bs-card-bg) 100%);
+        background: linear-gradient(to bottom, transparent 0%, var(--bs-card-bg) 90%, var(--bs-card-bg) 100%);
     }
 }
 
@@ -62,4 +62,14 @@
 
 .mh-300 {
     min-height: 300px;
+}
+
+.box {
+    border: solid 1px rgba($color: #fff, $alpha: 0.4);
+}
+.text-center {
+    text-align: center;
+}
+.fi {
+    font-style: italic;
 }

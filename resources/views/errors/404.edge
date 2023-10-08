@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WillWebGame</title>
+    @entryPointStyles('app')
+    @entryPointScripts('app')
+</head>
+
+<style>
+    main {
+        width: 1000px;
+    }
+</style>
+
+<body>
+    @!component('components/header')
+
+    <main class="">
+        <div class="fl cl mx-auto">
+            <h1 class="my-2 mt-5"><code>NotFound 404</code></h1>
+            <div class="card cover my-3 box">
+                <figure>
+                    <img src="{{ asset('assets/images/case404case.svg') }}" alt="404" class="m-5">
+                    <figcaption>
+                        <p class="text-center fi">ごめんなさい！そのページは存在しません。</p>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

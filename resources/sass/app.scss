@@ -99,7 +99,6 @@ img.card-thumbnails {
 
 .card {
   --bs-card-spacer-x: 0.5em;
-
 }
 
 .badge {
@@ -109,10 +108,18 @@ img.card-thumbnails {
     border: solid 1px $_color;
     color: $_color;
   }
-  &.tool {
+  &.generator {
     background-color: transparent;
 
     $_color: #f17070;
+
+    border: solid 1px $_color;
+    color: $_color;
+  }
+  &.tool {
+    background-color: transparent;
+
+    $_color: #e9912c;
 
     border: solid 1px $_color;
     color: $_color;

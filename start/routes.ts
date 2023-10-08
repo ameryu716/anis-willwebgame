@@ -28,7 +28,7 @@ const data = {
       thumbnail_url: "assets/images/link_thumbnails/thumb-t1.png",
       description: "駒の名前は自分で決めろ、目指せ3D駒モデラー！！",
       division: "tool",
-      tags: [{ class: "tool", name: "Generator", color: "#f17070" }],
+      tags: [{ class: "generator", name: "Generator", color: "#f17070" }],
     },
 
     {
@@ -38,16 +38,16 @@ const data = {
       description:
         "「ジェネレータが好きな人と付き合いたいです～！」というのは、ジェネレータで身内ノリしてワイワイできる人を探してるのであって、スクリプトをガンガン書いて笑みを浮かべたり、深夜二時にエラーが出て発狂したりするような異常行動者を探しているわけではない。",
       division: "tool",
-      tags: [{ class: "tool", name: "Generator", color: "#f17070" }],
+      tags: [{ class: "generator", name: "Generator", color: "#f17070" }],
     },
     {
       title: "BoxDancer",
-      relative_url: "box-dancer",
+      relative_url: "/tools/box-dancer",
       thumbnail_url: "assets/images/link_thumbnails/empty.jpg",
       description:
         "自分だけのローカルブックマークツール！データはブラウザに保存されるので安心して使えます。",
       division: "tool",
-      tags: [{ class: "tool", name: "Tool", color: "#f17070" }],
+      tags: [{ class: "tool", name: "Tool", color: "#e9912c" }],
     },
     {
       title: "画像ピンボール",
@@ -84,4 +84,8 @@ Route.get("/", async ({ view }) => {
   return await view.render("index", {
     data: data,
   });
+});
+
+Route.get("/404", async ({ view }) => {
+  return await view.render("errors/404");
 });
