@@ -43,7 +43,7 @@ const data = {
     {
       title: "BoxDancer",
       relative_url: "/tools/box-dancer",
-      thumbnail_url: "assets/images/link_thumbnails/empty.jpg",
+      thumbnail_url: "assets/images/link_thumbnails/thumb-t4.png",
       description:
         "自分だけのローカルブックマークツール！データはブラウザに保存されるので安心して使えます。",
       division: "tool",
@@ -51,7 +51,7 @@ const data = {
     },
     {
       title: "画像ピンボール",
-      relative_url: "img-pinball",
+      relative_url: "games/img-pinball",
       thumbnail_url: "assets/images/link_thumbnails/thumb-g2.png",
       division: "game",
       description:
@@ -60,14 +60,13 @@ const data = {
     },
     {
       title: "ジャイロ将棋",
-      relative_url: "geiro-shogi-board",
+      relative_url: "games/geiro-shogi-board",
       thumbnail_url: "assets/images/link_thumbnails/thumb-g3.png",
       division: "game",
       description:
         "うまく将棋盤を傾けて、歩兵で玉将に突撃しよう！王は逃げるのが得意でちょこまかと動き回る！うまく動きを読んで突撃しろ！！¥n¥n歩兵の位置が玉に重なればクリア！逆に将棋盤の外に出てしまうとNGだ。王のライフを先にゼロにしよう！",
       tags: [{ class: "game", name: "Game", color: "#a86aff" }],
     },
-
     {
       title: "漢検2級読みクイズ",
       relative_url: "quizzes/kanji/read/2",
@@ -76,6 +75,15 @@ const data = {
       description:
         "※音が出ます。ご注意ください。¥n¥n一般人の常識？漢検二級の読みが効果音付きで学習できる！¥n¥n総合正解率付きで結果が分かりやすい！全140問から出題。問題文はちょっと意味が分からない文が多い！気を付けるように。¥n¥n作者のおすすめは勝ち抜きモードだ！失敗は許されないぞ？",
       tags: [{ class: "game", name: "Game", color: "#a86aff" }],
+    },
+    {
+      title: "ColorDD",
+      relative_url: "tools/colordd",
+      thumbnail_url: "assets/images/link_thumbnails/thumb-t3.png",
+      division: "tool",
+      description:
+        "カラーツール",
+      tags: [{ class: "tool", name: "Tool", color: "#e9912c" }],
     },
   ],
 };
