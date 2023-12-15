@@ -30,8 +30,8 @@ jobs:
       - name: Checkout Repo.
         uses: actions/checkout@v4
 
-      # - name: Install Vite.
-      #   run: npm install vite@latest
+      - name: Install NPM Package.
+        run: npm install
 
       - name: exec build command.
         run: node ace build --production
