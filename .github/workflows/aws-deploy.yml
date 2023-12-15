@@ -57,6 +57,12 @@ jobs:
       - name: cd parents
         run: cd ../
 
+      - name: test-echo
+        run: echo "aa">b.txt
+
+      - name: Permission txt
+        run: chmod 600 b.txt
+
       - name: Set-up ssh dir.
         run: mkdir ~/.ssh
 
@@ -78,10 +84,9 @@ jobs:
       - name: Permission fix pem-file
         run: chmod 600 ~/.ssh/aws.pem
 
-      
-
       - name: exec scp command.
-        run: scp -r build aws:${{secrets.DEPLOY_DIR}}
+        run: scp b.txt aws:${{secrets.DEPLOY_DIR}}
+      #   run: scp -r build aws:${{secrets.DEPLOY_DIR}}
 
       - name: Remove Github Actions IP from security group
         run: |
