@@ -1,0 +1,64 @@
+name: TEST SCP
+
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  Build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Get Github action IP
+        id: ip
+        uses: haythem/public-ip@v1.2
+
+      - name: Add Github Actions IP to Security group
+        run: aws ec2 authorize-security-group-ingress --group-name ${{ env.AWS_SECURITY_GROUP_NAME }} --protocol tcp --port 22 --cidr ${{ steps.ip.outputs.ipv4 }}/32
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: ap-northeast-1
+          AWS_SECURITY_GROUP_NAME: ${{ secrets.AWS_SECURITY_GROUP_NAME }}
+
+      - name: test-echo
+        run: echo "aa">b.txt
+
+      - name: ls2
+        run: ls -la
+
+      - name: Set-up ssh dir.
+        run: mkdir ~/.ssh
+
+      - name: Permission ssh dir
+        run: chmod -R 0700 ~/.ssh
+
+      - name: Set-up ssh config-file
+        run: echo -e "Host aws\n    HostName ${{secrets.DEPLOY_HOST}}\n    User ${{secrets.SSH_USER}}\n    IdentityFile ~/.ssh/aws.pem\n    StrictHostKeyChecking no">~/.ssh/config
+
+      - name: Show ssh config-file
+        run: cat ~/.ssh/config
+
+      - name: Permission fix config-file
+        run: chmod 600 ~/.ssh/config
+
+      - name: Set-up ssh-key file.
+        run: echo "${{ secrets.SSH_KEY }}">~/.ssh/aws.pem
+
+      - name: Permission fix pem-file
+        run: chmod 600 ~/.ssh/aws.pem
+
+      - name: exec scp command.
+        run: scp b.txt aws:${{secrets.DEPLOY_DIR}}
+
+      - name: Remove Github Actions IP from security group
+        run: |
+          aws ec2 revoke-security-group-ingress --group-name ${{ env.AWS_SECURITY_GROUP_NAME }} --protocol tcp --port 22 --cidr ${{ steps.ip.outputs.ipv4 }}/32
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: ap-northeast-1
+          AWS_SECURITY_GROUP_NAME: ${{ secrets.AWS_SECURITY_GROUP_NAME }}
+
+        if: always()
