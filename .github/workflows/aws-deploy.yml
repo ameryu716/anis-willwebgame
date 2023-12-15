@@ -60,9 +60,6 @@ jobs:
       - name: test-echo
         run: echo "aa">b.txt
 
-      - name: Permission txt
-        run: chmod 777 b.txt
-
       - name: Set-up ssh dir.
         run: mkdir ~/.ssh
 
