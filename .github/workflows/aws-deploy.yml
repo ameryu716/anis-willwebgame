@@ -42,8 +42,8 @@ jobs:
       # - name: ls1
       #   run: ls -la
 
-      - name: Permission fix build dir
-        run: chmod -R 777 build
+      # - name: Permission fix build dir
+      #   run: chmod -R 777 build
 
       - name: cd build
         run: cd build
