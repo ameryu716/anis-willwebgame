@@ -25,6 +25,9 @@ jobs:
       - name: test-echo
         run: echo "aa">b.txt
 
+      - name: Permission
+        run: chmod 0771 b.txt
+
       - name: ls2
         run: ls -la
 
