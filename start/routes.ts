@@ -33,7 +33,7 @@ const data = {
 
     {
       title: "〇〇好き異常行動者否定ジェネレータ",
-      relative_url: "gene-1",
+      relative_url: "tools/gene-1",
       thumbnail_url: "assets/images/link_thumbnails/thumb-t2.png",
       description:
         "「ジェネレータが好きな人と付き合いたいです～！」というのは、ジェネレータで身内ノリしてワイワイできる人を探してるのであって、スクリプトをガンガン書いて笑みを浮かべたり、深夜二時にエラーが出て発狂したりするような異常行動者を探しているわけではない。",
@@ -42,7 +42,7 @@ const data = {
     },
     {
       title: "BoxDancer",
-      relative_url: "/tools/box-dancer",
+      relative_url: "tools/box-dancer",
       thumbnail_url: "assets/images/link_thumbnails/thumb-t4.png",
       description:
         "自分だけのローカルブックマークツール！データはブラウザに保存されるので安心して使えます。",
